@@ -1,6 +1,6 @@
-import styles from "@/components/Projects/Projects.module.css"
+import styles from "@/components/Projects/Projects.module.css";
+
 export default async function ProjectTab() {
-  const projectInfo = await fetch("http://localhost:3000/projects.json").then((res) => res.json());
   return (
     <>
       <div className={styles.projects}>

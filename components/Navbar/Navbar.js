@@ -1,15 +1,16 @@
 import styles from "@/components/Navbar/Navbar.module.css";
+import Link from "next/link";
 export default function Nav() {
   return (
     <>
       <div className={styles.nav}>
-        <a className = {styles.title} href="/" >
+        <Link className = {styles.title} href="/" >
           <h2>Charles Hodgins - Software Engineer</h2>
-        </a>
+        </Link>
         <div className={styles.sections}>
-          <a className = {styles.section} href="">About Me</a>
-          <a className = {styles.section} href="/projects">Projects</a>
-          <a className = {styles.section} href="">Contact</a>
+          <Link className = {styles.section} href="">About Me</Link>
+          <Link className = {styles.section} href="/projects">Projects</Link>
+          <Link className = {styles.section} href="">Contact</Link>
         </div>
       </div>
     </>

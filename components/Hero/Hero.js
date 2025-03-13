@@ -3,7 +3,7 @@ import styles from "@/components/Hero/Hero.module.css"
 export default function Hero({ section }){
     const text = (
       <p className="">
-        I'm <span style = {{fontWeight: "bold" }}>Charles Hodgins,</span> an aspiring
+        I&apos;m <span style = {{fontWeight: "bold" }}>Charles Hodgins,</span> an aspiring
         <span style = {{color: "blue", fontWeight: "bold"}} > Software Engineer </span>
         studying Computer Engineering at{" "}
         <span style = {{color: "green",fontWeight: "bold"}}> Binghamton University, </span>
