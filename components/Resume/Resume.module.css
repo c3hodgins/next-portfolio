@@ -1,0 +1,76 @@
+.resumeSection{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    text-align:center;
+    padding:1.5rem;
+    background-color:white;
+    color:black;
+    margin: 7rem 1rem 7rem 1rem;
+
+}
+.resumePage{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    text-align:left;
+    max-width:50%;
+    gap:2rem;
+
+}
+.education{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.experience{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.educationInfo{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.resume{
+    width:80%;
+}
+.resumeContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:1.5rem;
+}
+.resumeLink{
+    transition: all ease-in-out .2s;
+}
+.resumeDownload{
+    background-color: rgb(45, 45, 255);
+    color:white;
+    border-radius: .2rem;
+    transition: all ease-in-out .2s;
+    margin: 1rem;
+}
+.resumeDownload:hover{
+    background-color:rgb(66, 66, 255);
+    transform: scale(1.1);
+}
+.resumeLink:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 500px){
+    .resumeSection{
+        flex-direction: column;
+    }
+    .education{
+        flex-direction:column;
+        justify-content: center;
+        }
+    .resumePage{
+        text-align: center;
+        max-width: 100%;
+    }
+}

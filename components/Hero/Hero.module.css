@@ -1,0 +1,31 @@
+.heroWrapper {
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 6rem 2rem 6rem 2rem;
+    gap:2rem;
+    background-color: white;
+  }
+  .heroText{
+      font-size: 1.5rem;
+  }
+  .heroImg{
+      min-width:35%;
+      border-radius:50%;
+      transition: all .2s;
+  }
+  
+  @media (max-width: 900px){
+      .heroWrapper{
+          flex-direction:column;
+          justify-content:center;
+          align-items:center;
+      }
+      .heroImg{
+          min-width:75%;
+      }
+      .heroText{
+          font-size:1.25rem;
+      }
+  }
