@@ -17,7 +17,6 @@ export default function Nav({ refs, handleSection, sections }) {
               {sections[idx]}
             </button>
           ))}
-          ;
         </div>
       </div>
     </>
