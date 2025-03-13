@@ -24,17 +24,19 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 1.25rem;
+    padding:1rem;
     border-radius:2rem;
 
 }
 .title:hover{
-    transform: scale(1.05);
-    padding:1rem;
+    transform: translateX(1rem);
     background-color:rgb(235, 235, 235);
-
 }
 
 .section{
+    border:none;
+    background-color: white;
+    color:black;
     padding:1rem;
     border-radius:2rem;
     transition: all .2s;

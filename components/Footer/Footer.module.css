@@ -8,4 +8,10 @@
     padding:1.5rem;
     background-color:rgb(240, 240, 240);
     color:black;
+    gap:1rem;
+}
+.contactInfo{
+    display:flex;
+    flex-direction: row;
+    gap:.5rem;
 }

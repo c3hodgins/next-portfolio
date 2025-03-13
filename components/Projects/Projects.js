@@ -1,8 +1,8 @@
 import styles from "@/components/Projects/Projects.module.css";
-export default function ProjectTab({}) {
+export default function ProjectTab({ref}) {
   return (
     <>
-    <h1 style = {{padding:'1rem'}}>Recent projects</h1>
+    <h1 ref = {ref} style = {{padding:'1rem'}}>Recent projects</h1>
       <div className={styles.projects}>
         {projectInfo.map((project, index) => (
           <div key={index} className={styles.project}>
