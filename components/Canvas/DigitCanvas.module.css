@@ -29,10 +29,13 @@
 }
 .mnistCanvas{
     transition:all .2s ease-in-out;
+    border: 2px solid #dadada;
+
 }
 .mnistCanvas:hover{
     transform:scale(1.1);
-    box-shadow: 0px 20px 5px -10px gray;
+    box-shadow: 0px 0px 30px 5px #9cb1ff;
+
 }
 .button:hover{
     background-color:rgb(59, 59, 255);
