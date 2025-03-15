@@ -68,7 +68,7 @@ const projectInfo = [
     Title: "Portfolio Website",
     Blurb:
       "The website youre on right now! Designed to introduce myself and show off some recent projects. Created with Next.js & deployed on Vercel",
-    Link: "https://github.com/c3hodgins/portfolio",
+    Link: "https://github.com/c3hodgins/next-portfolio",
     Image: "next-react.png",
     Languages: ["Javascript", "React.js"],
   },
