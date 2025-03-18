@@ -54,7 +54,7 @@
 
 @media (max-width: 500px){
     .buttonContainer{
-        flex-direction:row;
+        flex-direction:row-reverse;
     }
     .mnistPredictor{
         flex-direction:column;
