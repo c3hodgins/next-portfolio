@@ -35,7 +35,7 @@
     max-height: 30%;
     aspect-ratio: 1;
     border-radius:3%;
-    object-fit:fill;
+    object-fit:cover;
 }
 .projectPageLink:hover{
     text-decoration: underline;
