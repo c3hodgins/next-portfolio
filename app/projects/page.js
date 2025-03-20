@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./projects.module.css";
 import { createClient } from "@supabase/supabase-js";
 
@@ -12,10 +13,10 @@ export default async function ProjectPage() {
     <div className={styles.projects}>
       {data &&
         data.map((project, index) => (
-          <div className={styles.project}>
-            <a href={`/projects/${project.id}`}>
+          <div key = {index} className={styles.project}>
+            <Link href={`/projects/${project.id}`}>
               <h1 key={index}>{project.project_title}</h1>
-            </a>
+            </Link>
             <br />
             <h2>{project.project_shortblurb}</h2>
             <br />

@@ -9,9 +9,9 @@ export default function Nav({ links, sections }) {
         </Link>
         <div className={styles.sections}>
           {sections.map((section, idx) => (
-            <a key={section} className={styles.section} href={links[idx]}>
+            <Link key={section} className={styles.section} href={links[idx]}>
               {sections[idx]}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

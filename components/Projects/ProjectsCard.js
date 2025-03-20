@@ -1,5 +1,7 @@
 import styles from "@/components/Projects/ProjectsCard.module.css";
 import { createClient } from "@supabase/supabase-js";
+import Image from "next/image";
+import Link from "next/link";
 export default async function ProjectTab() {
 
   const supabaseKey = process.env.SUPABASE_KEY;
@@ -14,19 +16,19 @@ export default async function ProjectTab() {
       <div className={styles.projects}>
         {projectInfo.map((project, index) => (
           <div key={index} className={styles.project}>
-            <img
+            <Image
               className={styles.projectImg}
               key={project.Image}
               src={project.Image}
             />
-            <a
+            <Link
               className={styles.projectPageLink}
               href={"/projects/" + project.id}
             >
               <h1 key={project.Title} style={{ fontWeight: "bold" }}>
                 {project.Title}
               </h1>
-            </a>
+            </Link>
             <div style={{ display: "flex", flexDirection: "row" }}>
               {project.Languages.map((language, idx) => (
                 <p key={language}>
@@ -47,7 +49,7 @@ export default async function ProjectTab() {
           </div>
         ))}
       </div>
-      <a className = {styles.pageLink} href = '/projects'>See all</a>
+      <Link className = {styles.pageLink} href = '/projects'>See all</Link>
     </div>
   );
 }
