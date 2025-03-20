@@ -22,12 +22,14 @@ body {
   color: black;
 }
 
+
 .main {
   display: flex;
   flex-direction: column;
   width: 100vw;
   background-color: white;
   color: black;
+  padding: 0rem 3rem 0rem 2rem;
 }
 
 body {

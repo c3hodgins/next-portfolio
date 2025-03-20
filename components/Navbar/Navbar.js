@@ -1,6 +1,6 @@
 import styles from "@/components/Navbar/Navbar.module.css";
 import Link from "next/link";
-export default function Nav({ refs, handleSection, sections }) {
+export default function Nav({ links, sections }) {
   return (
     <>
       <div className={styles.nav}>
@@ -9,13 +9,9 @@ export default function Nav({ refs, handleSection, sections }) {
         </Link>
         <div className={styles.sections}>
           {sections.map((section, idx) => (
-            <button
-              key={section}
-              className={styles.section}
-              onClick={() => handleSection(refs[idx])}
-            >
+            <a key={section} className={styles.section} href={links[idx]}>
               {sections[idx]}
-            </button>
+            </a>
           ))}
         </div>
       </div>

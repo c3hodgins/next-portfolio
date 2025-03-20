@@ -1,8 +1,16 @@
-import styles from "@/components/Projects/Projects.module.css";
-export default function ProjectTab({ref}) {
+import styles from "@/components/Projects/ProjectsCard.module.css";
+import { createClient } from "@supabase/supabase-js";
+export default async function ProjectTab() {
+
+  const supabaseKey = process.env.SUPABASE_KEY;
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  let { data } = await supabase.from("Projects").select("*").range('0','3');
+
   return (
-    <>
-    <h1 ref = {ref} style = {{padding:'1rem'}}>Recent projects</h1>
+    <div className={styles.projectsContainer}>
+    <h1  style = {{padding:'1rem'}}>Recent projects</h1>
       <div className={styles.projects}>
         {projectInfo.map((project, index) => (
           <div key={index} className={styles.project}>
@@ -39,7 +47,8 @@ export default function ProjectTab({ref}) {
           </div>
         ))}
       </div>
-    </>
+      <a className = {styles.pageLink} href = '/projects'>See all</a>
+    </div>
   );
 }
 
