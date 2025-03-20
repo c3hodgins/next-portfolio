@@ -7,19 +7,18 @@ export default async function ProjectPage() {
   const supabaseUrl = process.env.SUPABASE_URL;
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  let { data } = await supabase.from("Projects").select("*");
-  console.log(data);
+  let { data:projects } = await supabase.from("Projects").select("*");
   return (
     <div className={styles.projects}>
-      {data &&
-        data.map((project, index) => (
+      {projects &&
+        projects.map((project, index) => (
           <div key = {index} className={styles.project}>
-            <Link href={`/projects/${project.id}`}>
+            <Link className = {styles.projectLink} href={`/projects/${project.id}`}>
               <h1 key={index}>{project.project_title}</h1>
             </Link>
             <br />
-            <h2>{project.project_shortblurb}</h2>
-            <br />
+            <p >{(project.project_dates.length > 1)?(project.project_dates[0]+' - '+project.project_dates[1]):(project.project_dates[0])}</p>
+            <p style = {{fontSize: '1.5rem'}}>{project.project_shortblurb}</p>
             <br />
           </div>
         ))}
