@@ -16,7 +16,7 @@ export default async function ProjectTab() {
       <div className={styles.projects}>
         {projectInfo.map((project, index) => (
           <div key={index} className={styles.project}>
-            <Image
+            <img
               className={styles.projectImg}
               key={project.Image}
               src={project.Image}

@@ -15,9 +15,9 @@ export default function Hero({ section }){
   
     return (
           <div className={styles.heroWrapper}>
-            <Image
+            <img
               className={styles.heroImg}
-              src="https://media.licdn.com/dms/image/v2/D4E03AQFBDheys8Vb2g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1697303529156?e=2147483647&v=beta&t=kaURF2pKegkGpdeA6kLw_ZIPXIaZPb4_ZByNNsTbR7k"
+              src="hero_photo.jpeg"
             />
             <div className={styles.heroText}>
               <h1>Hi!</h1>
