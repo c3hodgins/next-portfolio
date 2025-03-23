@@ -2,11 +2,8 @@ import styles from "@/components/Projects/ProjectsCard.module.css";
 import { createClient } from "@supabase/supabase-js";
 import Image from "next/image";
 import Link from "next/link";
+import { supabase } from "@/utils/supabase";
 export default async function ProjectTab() {
-
-  const supabaseKey = process.env.SUPABASE_KEY;
-  const supabaseUrl = process.env.SUPABASE_URL;
-  const supabase = createClient(supabaseUrl, supabaseKey);
 
   let { data } = await supabase.from("Projects").select("*").range('0','3');
 

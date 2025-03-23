@@ -1,10 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 import Link from "next/link";
+import { supabase } from "@/utils/supabase";
 export default async function ProjectPage({ params }) {
   const { id } = await params;
-  const supabaseKey = process.env.SUPABASE_KEY;
-  const supabaseUrl = process.env.SUPABASE_URL;
-  const supabase = createClient(supabaseUrl, supabaseKey);
 
   let {
     data: [project],
