@@ -38,7 +38,7 @@ export default function Login() {
         <h1>Log In</h1>
 
         <h3>
-          Email:
+          Email:{" "}
           <input
             className={styles.loginInput}
             type="email"
@@ -48,7 +48,7 @@ export default function Login() {
         </h3>
 
         <h3>
-          Password:
+          Password:{" "}
           <input
             className={styles.loginInput}
             type="password"

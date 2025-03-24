@@ -13,3 +13,19 @@
     padding:.5rem;
     border: 1px solid gray !important;
 }
+
+.loginInput:-webkit-autofill {
+    background-color: white !important;
+    color: black !important;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: black !important;
+
+}
+
+/* Override autofill when focused */
+.loginInput:-webkit-autofill:focus {
+    background-color: white !important;
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+
+}

@@ -5,22 +5,29 @@ import { useRouter } from "next/navigation";
 export default function poop() {
   const router = useRouter();
   const [session, setSession] = useState(null);
+  const [user, setUser] = useState("");
   useEffect(() => {
     const checkSession = async () => {
       const { data } = await supabase.auth.getSession();
       setSession(data.session);
-    const email = data.session.user.email      //   setLoading(false);
-
-      if (email !== "c3hodgins@gmail.com") {
-        router.replace("/login"); // Redirect to login if not authenticated
+      if (data.session) {
+        setUser(data.session.user.email);
+      } else {
+        router.push("/login");
       }
     };
 
-    checkSession();
+    checkSession()
   }, []);
-  return (
-    <>
-      <p>poop</p>
-    </>
-  );
+
+  console.log(user);
+
+  if (user == process.env.NEXT_PUBLIC_ADMIN_EMAIL) {
+    return (
+      <>
+        <p>poop</p>
+      </>
+    );
+  }
+  return <p></p>;
 }
