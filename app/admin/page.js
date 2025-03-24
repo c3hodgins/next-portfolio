@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/utils/supabase";
 import { useRouter } from "next/navigation";
-export default function poop() {
+export default function Admin() {
   const router = useRouter();
   const [session, setSession] = useState(null);
   const [user, setUser] = useState("");
