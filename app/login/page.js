@@ -1,14 +1,12 @@
 "use client";
 import styles from "./login.module.css";
-import { useState, useEffect } from "react";
-import { createClient } from "@supabase/supabase-js";
+import { useState } from "react";
 import { supabase } from "@/utils/supabase";
 import { useRouter } from "next/navigation";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -26,7 +24,6 @@ export default function Login() {
     if (error) {
       setError(error.message);
     } else {
-      console.log("User logged in:", data);
       router.push("/admin"); // Redirect to the admin page
     }
     setLoading(false);

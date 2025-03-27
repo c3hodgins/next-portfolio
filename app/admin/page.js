@@ -1,33 +1,46 @@
-"use client";
-import { useEffect, useState } from "react";
+import { redirect } from "next/navigation";
+;import styles from "./admin.module.css";
 import { supabase } from "@/utils/supabase";
-import { useRouter } from "next/navigation";
-export default function Admin() {
-  const router = useRouter();
-  const [session, setSession] = useState(null);
-  const [user, setUser] = useState("");
-  useEffect(() => {
-    const checkSession = async () => {
-      const { data } = await supabase.auth.getSession();
-      setSession(data.session);
-      if (data.session) {
-        setUser(data.session.user.email);
-      } else {
-        router.push("/login");
-      }
-    };
+import Link from "next/link";
 
-    checkSession()
-  }, []);
+export default async function Admin() {
 
-  console.log(user);
+  const {data: {session}} = await supabase.auth.getSession();
 
-  if (user == process.env.NEXT_PUBLIC_ADMIN_EMAIL) {
-    return (
-      <>
-        <p>poop</p>
-      </>
-    );
-  }
-  return <p></p>;
+  console.log(session)
+
+  // if (session.user.email == process.env.NEXT_PUBLIC_ADMIN_EMAIL) {
+  //   return (
+  //     <>
+  //       {projects &&
+  //         projects
+  //           .sort((a, b) => new Date(b.date) - new Date(a.date))
+  //           .map((project, index) => (
+  //             <div key={index} className={styles.project}>
+  //               {project.image_path && (
+  //                 <img
+  //                   className={styles.projectImage}
+  //                   src={images.getPublicUrl(project.image_path).data.publicUrl}
+  //                 ></img>
+  //               )}
+  //               <Link
+  //                 className={styles.projectLink}
+  //                 href={`/projects/${project.id}`}
+  //               >
+  //                 <h1 key={index}>{project.title}</h1>
+  //               </Link>
+  //               <br />
+  //               <p>
+  //                 {project.dates.length > 1
+  //                   ? project.dates[0] + " - " + project.dates[1]
+  //                   : project.dates[0]}
+  //               </p>
+  //               <p style={{ fontSize: "1.5rem" }}>{project.short_blurb}</p>
+  //               <br />
+  //             </div>
+  //           ))}
+  //     </>
+  //   );
+  // }
+  // return <p></p>;
 }

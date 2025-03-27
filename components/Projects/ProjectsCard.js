@@ -1,6 +1,4 @@
 import styles from "@/components/Projects/ProjectsCard.module.css";
-import { createClient } from "@supabase/supabase-js";
-import Image from "next/image";
 import Link from "next/link";
 import { supabase } from "@/utils/supabase";
 export default async function ProjectTab() {
