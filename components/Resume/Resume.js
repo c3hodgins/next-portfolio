@@ -36,7 +36,7 @@ export default function Resume() {
         <div className={styles.resumeContainer}>
           <a
             className={styles.resumeLink}
-            href="Charles_Hodgins_Resume_Mar_2025.pdf"
+            href="Charles_Hodgins_Resume_August_2025.pdf"
           >
             <img
               className={styles.resume}

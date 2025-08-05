@@ -11,7 +11,7 @@ export default function Home() {
       <Resume />
       <Projects />
       <DigitCanvas />
-      <Feedback />
+      {/* <Feedback /> */}
     </>
   );
 }
