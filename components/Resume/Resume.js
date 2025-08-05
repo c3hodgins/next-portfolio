@@ -40,7 +40,7 @@ export default function Resume() {
           >
             <img
               className={styles.resume}
-              src="Charles_Hodgins_Resume_August_2025.jpg"
+              src="Charles_Hodgins_Resume_August_2025.png"
             ></img>
           </a>
           <a
