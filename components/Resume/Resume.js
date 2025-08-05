@@ -40,13 +40,13 @@ export default function Resume() {
           >
             <img
               className={styles.resume}
-              src="Charles_Hodgins_Resume_Mar_2025.jpg"
+              src="Charles_Hodgins_Resume_August_2025.jpg"
             ></img>
           </a>
           <a
             className='linkButton'
-            href="Charles_Hodgins_Resume_Mar_2025.pdf"
-            download={"Charles_Hodgins_Resume_Mar_2025.pdf"}
+            href="Charles_Hodgins_Resume_August_2025.pdf"
+            download={"Charles_Hodgins_Resume_August_2025.pdf"}
           >
             Download Resume
           </a>
