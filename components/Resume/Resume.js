@@ -16,13 +16,18 @@ export default function Resume() {
             ))}
           </div>
           <div className={styles.education}>
-            <div className= {styles.educationInfo}>
+            <div className={styles.educationInfo}>
               <h1>🎓 Education</h1>
               {educationInfo.map((education, idx) => (
                 <div key={idx}>
                   <h2 key={education.Degree}>{education.Degree}</h2>
                   <h4 key={education.University}>
                     {education.University + ", " + education.Grad}
+                    {education.Focus && (
+                      <h4 key={education.Focus}>
+                        {"Focus in  " + education.Focus}
+                      </h4>
+                    )}
                   </h4>
                 </div>
               ))}
@@ -44,7 +49,7 @@ export default function Resume() {
             ></img>
           </a>
           <a
-            className='linkButton'
+            className="linkButton"
             href="https://docs.google.com/document/d/1pftUnBcoq_FD3LJpyaXcibGvlFqkNmnq4CkL2nCDFqY/export?format=pdf"
           >
             Download Resume
@@ -81,6 +86,7 @@ const educationInfo = [
   },
   {
     Degree: "Masters of Science in Electrical and Computer Engineering",
+    Focus: "Signal Processing",
     University: "Binghamton University, State University of New York",
     Grad: "May 2026",
   },
