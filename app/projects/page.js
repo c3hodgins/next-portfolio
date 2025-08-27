@@ -4,7 +4,7 @@ import { supabase } from "@/utils/supabase";
 
 export default async function ProjectPage() {
   const images = supabase.storage.from("images");
-  let { data: projects } = await supabase.from("Projects").select("*");
+  let { data: projects } = await supabase.from("Projects").select("*").order("id", { ascending: false });
 
   return (
     <div className={styles.projects}>
@@ -13,18 +13,19 @@ export default async function ProjectPage() {
           .sort((a, b) => new Date(b.date) - new Date(a.date))
           .map((project, index) => (
             <div key={index} className={styles.project}>
-              {project.image_path && (
-                <img
-                  className={styles.projectImage}
-                  src={images.getPublicUrl(project.image_path).data.publicUrl}
-                ></img>
-              )}
               <Link
                 className={styles.projectLink}
                 href={`/projects/${project.id}`}
               >
                 <h1 key={index}>{project.title}</h1>
               </Link>
+              {project.image_path && (
+                <img
+                  className={styles.projectImage}
+                  src={images.getPublicUrl(project.image_path).data.publicUrl}
+                ></img>
+              )}
+              
               <br />
               <p>
                 {project.dates.length > 1

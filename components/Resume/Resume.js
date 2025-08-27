@@ -36,17 +36,16 @@ export default function Resume() {
         <div className={styles.resumeContainer}>
           <a
             className={styles.resumeLink}
-            href="Charles_Hodgins_Resume_August_2025.pdf"
+            href="https://docs.google.com/document/d/1pftUnBcoq_FD3LJpyaXcibGvlFqkNmnq4CkL2nCDFqY/edit?usp=sharing"
           >
             <img
               className={styles.resume}
-              src="Charles_Hodgins_Resume_August_2025.png"
+              src="Charles_Hodgins_Resume.jpg"
             ></img>
           </a>
           <a
             className='linkButton'
-            href="Charles_Hodgins_Resume_August_2025.pdf"
-            download={"Charles_Hodgins_Resume_August_2025.pdf"}
+            href="https://docs.google.com/document/d/1pftUnBcoq_FD3LJpyaXcibGvlFqkNmnq4CkL2nCDFqY/export?format=pdf"
           >
             Download Resume
           </a>
@@ -81,7 +80,7 @@ const educationInfo = [
     Grad: "May 2025",
   },
   {
-    Degree: "4+1 Masters of Science in Computer Engineering",
+    Degree: "Masters of Science in Electrical and Computer Engineering",
     University: "Binghamton University, State University of New York",
     Grad: "May 2026",
   },

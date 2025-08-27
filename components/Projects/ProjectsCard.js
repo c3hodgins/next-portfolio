@@ -4,8 +4,7 @@ import { supabase } from "@/utils/supabase";
 export default async function ProjectTab() {
 
   const images = supabase.storage.from('images');
-  let { data:projectInfo } = await supabase.from("Projects").select("*").range('1','3');
-  
+  let { data:projectInfo } = await supabase.from("Projects").select("*").order("id", { ascending: false }).limit(3);
   return (
     <div className={styles.projectsContainer}>
     <h1  style = {{padding:'1rem'}}>Recent projects</h1>
@@ -30,7 +29,7 @@ export default async function ProjectTab() {
                 <p key={language}>
                   {project.languages.length - 1 == idx
                     ? language
-                    : language + ", "}
+                    : language + ","}
                 </p>
               ))}
             </div>
