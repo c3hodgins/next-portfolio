@@ -23,12 +23,13 @@ export default function Resume() {
                   <h2 key={education.Degree}>{education.Degree}</h2>
                   <h4 key={education.University}>
                     {education.University + ", " + education.Grad}
-                    {education.Focus && (
+                    
+                  </h4>
+                  {education.Focus && (
                       <h4 key={education.Focus}>
                         {"Focus in  " + education.Focus}
                       </h4>
                     )}
-                  </h4>
                 </div>
               ))}
             </div>

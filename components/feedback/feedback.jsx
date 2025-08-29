@@ -6,6 +6,7 @@ import styles from "./feedback.module.css";
 function Feedback() {
   const [name, setName] = useState("");
   const [feedback, setFeedback] = useState("");
+  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(name, feedback);
@@ -16,6 +17,7 @@ function Feedback() {
         .insert({ name: name, comment: feedback }));
     setName("");
     setFeedback("");
+    setSubmitted(true);
     console.log({ name: name, comment: feedback });
   };
   return (
@@ -24,7 +26,7 @@ function Feedback() {
         Feel free to provide some feedback on what you did or didn't like about
         my site, or something you'd like to see implemented differently ;)
       </h1>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      {!submitted ? <form className={styles.form} onSubmit={handleSubmit}>
         <input
           className={styles.nameInput}
           type="text"
@@ -40,7 +42,7 @@ function Feedback() {
         <button className={styles.submitButton} type="submit">
           Submit
         </button>
-      </form>
+      </form> : <h2>Thanks for the feedback!</h2>}
     </div>
   );
 }
