@@ -9,6 +9,17 @@ export default function DigitCanvas() {
   const [prediction, setPrediction] = useState(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [canvasClear, setCanvasClear] = useState(false);
+  const modelRef = useRef(null);
+  
+  useEffect(() => {
+    const loadModel = async () => {
+      if (!modelRef.current) {
+        modelRef.current = await tf.loadLayersModel("/mnist_model/model.json");
+      }
+    };
+
+    loadModel();
+  }, []);
 
   const handleClearCanvas = () => {
     setCanvasClear((current) => !current);
@@ -131,8 +142,7 @@ export default function DigitCanvas() {
       .expandDims(0); // Make it batch size 1
 
     // Load the MNIST model
-    const model = await tf.loadLayersModel("/mnist_model/model.json");
-    const prediction = model.predict(tensor);
+    const prediction = modelRef.current.predict(tensor);
     const predictedDigit = prediction.argMax(1).dataSync()[0];
 
     setPrediction(predictedDigit);
@@ -140,14 +150,7 @@ export default function DigitCanvas() {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "1rem",
-          padding: "2rem",
-        }}
-      >
+      <div className={styles.classifier}>
         <h1>Interactive MNIST digit classifier with Tensorflow.js</h1>
         <h2>Try drawing a number 0-9</h2>
       </div>

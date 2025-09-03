@@ -7,6 +7,7 @@ function Feedback() {
   const [name, setName] = useState("");
   const [feedback, setFeedback] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(name, feedback);
@@ -20,6 +21,7 @@ function Feedback() {
     setSubmitted(true);
     console.log({ name: name, comment: feedback });
   };
+  
   return (
     <div className={styles.container}>
       <h1>
