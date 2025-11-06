@@ -8,7 +8,7 @@ export default function Hero({ section }){
         <span style = {{color: "blue", fontWeight: "bold"}} > Software Engineer </span>
         studying Computer Engineering at{" "}
         <span style = {{color: "green",fontWeight: "bold"}}> Binghamton University, </span>
-        with a passion for engineering solutions with application development, machine learning and embedded
+        with a passion for engineering solutions with application development, deep learning and embedded
         systems!
       </p>
     );
