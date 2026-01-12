@@ -57,9 +57,6 @@ export default function Resume() {
           </a>
         </div>
       </div>
-      {/* <div className="skills">
-        <h1>🔧 Skills</h1>
-      </div> */}
     </>
   );
 }

@@ -35,7 +35,8 @@
 }
 .resume{
     width:80%;
-    filter:blur(1);
+    filter:blur(1px);
+    background-color:white;
 }
 .resumeContainer{
     display:flex;
@@ -65,6 +66,7 @@
 @media (max-width: 500px){
     .resumeSection{
         flex-direction: column;
+        margin:0;
     }
     .education{
         flex-direction:column;
