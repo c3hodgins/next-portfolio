@@ -6,7 +6,7 @@ export default async function ProjectPage() {
   return (
     <div className={styles.projects}>
       {projectInfo &&
-        projectInfo.reverse()
+        projectInfo
           .map((project, index) => (
             <div key={index} className={styles.project}>
               <Link
