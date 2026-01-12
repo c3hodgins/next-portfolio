@@ -66,6 +66,12 @@ export default function Resume() {
 
 const experienceInfo = [
   {
+    Role: "Graduate Machine Learning Teaching Assistant",
+    Team: "Binghamton University Computer Science Department",
+    Blurb:
+      "Give lectures on machine learning, provide feedback and hold office hours for graduate level data science students",
+  },
+  {
     Role: "Firmware Engineer",
     Team: "Binghamton University Rover Team",
     Blurb:
@@ -87,7 +93,7 @@ const educationInfo = [
   },
   {
     Degree: "Masters of Science in Electrical and Computer Engineering",
-    Focus: "Signal Processing",
+    Focus: "Digital Signal Processing",
     University: "Binghamton University, State University of New York",
     Grad: "May 2026",
   },

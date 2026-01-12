@@ -10,6 +10,12 @@
     color:var(--text-color);
     gap:1rem;
 }
+.contactLink:hover{
+    color:cyan;
+    transform:scale(1.05);
+    transition: ease-in-out .05s;
+    text-decoration: underline;
+}
 .contactInfo{
     display:flex;
     flex-direction: row;

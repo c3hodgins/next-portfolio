@@ -1,23 +1,23 @@
 import styles from "@/components/Projects/ProjectsCard.module.css";
 import Link from "next/link";
-import { supabase } from "@/utils/supabase";
+import {projectInfo} from "@/public/ProjectsInfo"
+
 export default async function ProjectTab() {
 
-  const images = supabase.storage.from('images');
-  let { data:projectInfo } = await supabase.from("Projects").select("*").order("id", { ascending: false }).limit(3);
   return (
     <div className={styles.projectsContainer}>
-    <h1  style = {{padding:'1rem'}}>Recent projects</h1>
+      <h1 style={{ padding: '1rem' }}>Recent projects</h1>
       <div className={styles.projects}>
-        {projectInfo.map((project, index) => (
+        {projectInfo.reverse().map((project, index) => 
+        index < projectInfo.length - 2? (
           <div key={index} className={styles.project}>
             <img
               className={styles.projectImg}
               key={project.image_path}
-              src={images.getPublicUrl(project.image_path).data.publicUrl}
+              src={"/"+project.image_path}
             />
             {project.id && <Link
-              className={styles.link}
+              className={styles.projectPageLink}
               href={"/projects/" + project.id}
             >
               <h1 key={project.title} style={{ fontWeight: "bold" }}>
@@ -26,7 +26,7 @@ export default async function ProjectTab() {
             </Link>}
             <div style={{ display: "flex", flexDirection: "row" }}>
               {project.languages.map((language, idx) => (
-                <p key={language}>
+                <p key={idx}>
                   {project.languages.length - 1 == idx
                     ? language
                     : language + ","}
@@ -42,9 +42,10 @@ export default async function ProjectTab() {
               )}
             </div>
           </div>
-        ))}
+        ):
+        null)}
       </div>
-      <Link className = {styles.pageLink} href = '/projects'>See all</Link>
+      <Link className={styles.pageLink} href='/projects'>See all</Link>
     </div>
   );
 }

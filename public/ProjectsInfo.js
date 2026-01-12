@@ -1,0 +1,62 @@
+export const projectInfo = [
+  {
+    id: 1,
+    created_at: "2025-03-20 20:46:26.366032+00",
+    title: "Pololu Zumo 32U4 IR Controlled Tank Robot",
+    short_blurb: "Developed an autonomous tank robot capable of navigating obstacle courses using over 10 sensors and outputs. Implemented PWM, bit manipulation, and signal processing to achieve 100% collision avoidance across multiple trials.",
+    link: null,
+    languages: ["Embedded C"],
+    long_blurb: ["Designed and programmed an autonomous tank robot to successfully traverse a dynamic obstacle course consisting of 5-10 obstacles. The system integrated over 10 sensors and outputs to enhance real-time navigation and environmental awareness. I developed and optimized hundreds of lines of functional code, implementing PWM control, bit manipulation, and advanced signal processing techniques. These optimizations enabled the robot to autonomously detect and avoid obstacles with 100% accuracy across three differently configured trials, demonstrating robust and reliable performance in real-world scenarios."],
+    dates: ["April 2023","May 2023"],
+    image_path: "zumo.jpg",
+    date: ["2023-04-01","2023-05-01"]
+  },
+  {
+    id: 2,
+    created_at: "2025-03-20 16:30:51.524452+00",
+    title: "FPGA Metal Detector Embedded System",
+    short_blurb: "Programmed a battery powered FPGA system with a softcore processor to detect magnetic field strength using a coil and a 7-segment display",
+    link: null,
+    languages: ["VHDL","Embedded C"],
+    long_blurb: ["As part of a multidisciplinary team of two other computer engineers and one electrical engineer, I contributed to the development of a battery-powered FPGA system designed to detect and measure magnetic field strength. The system utilized a softcore processor to process sensor data and display real-time readings on a 7-segment display. My role focused on programming the FPGA, developing embedded C code for efficient signal processing, and ensuring seamless integration of the hardware and software components.","The electrical engineer on our team designed and implemented a Colpitts oscillator to generate an AC signal, which was sent through a custom coil. This setup induced a magnetic field that, when placed near metallic objects, generated a reinduced current. Our FPGA system processed these signals to determine the presence and relative strength of nearby metal. By optimizing the firmware, I improved the accuracy of field detection while ensuring efficient power consumption.","During the final demo the system was able to accurately classify 14/15 different sized metal objects as small medium or large objects relative to the coil. This project combined principles of electromagnetism, embedded systems, and digital design, providing hands-on experience in both hardware and software development. The collaborative effort between computer and electrical engineers was crucial in developing a functional and precise detection system."],
+    dates: ["April 2024","May 2025"],
+    image_path: "fpga.png",
+    date: ["2024-04-01","2024-05-01"]
+  },
+  {
+    id: 3,
+    created_at: "2025-03-20 16:31:51.366784+00",
+    title: "Next.js Portfolio Website",
+    short_blurb: "The website you're on right now! Designed to introduce myself and show off some recent projects. Created with Next.js & deployed on Vercel",
+    link: "https://github.com/c3hodgins/next-portfolio",
+    languages: ["JavaScript","PostgreSQL"],
+    long_blurb: ["I built my personal website as a platform to showcase my projects, technical skills, and interests in software development and machine learning. The site is deployed on Vercel and developed using Next.js, allowing for a smooth, interactive experience. It serves as both a portfolio and a space for experimentation, where I integrate new technologies and features as I refine my web development skills.","Beyond just showcasing my work, my website acts as a testing ground for learning new frameworks and tools. I’ve structured it in a way that makes future expansion easy, whether that’s implementing a blog, adding interactive project demos"],
+    dates: ["Feb 2025","Current"],
+    image_path: "next-react.png",
+    date: ["2025-02-01"]
+  },
+  {
+    id: 4,
+    created_at: "2025-03-20 16:27:58.455909+00",
+    title: "F1Tenth Autonomous RC Car - Lockheed Martin",
+    short_blurb: "Trained and tested an open-source competition autonomous racecar with a  ROS2 workspace using computer vision, lidar point clouds and custom machine pytorch models.",
+    link: "https://github.com/Binghamton-University-Roboracer",
+    languages: ["Python","C++","Bash"],
+    long_blurb: ["As the Software Lead for the F1Tenth Autonomous RC Race Car project in collaboration with Lockheed Martin, I am developing an intelligent robotic system capable of autonomous navigation alongside 3 of my peers. This project leverages sensor fusion, machine learning, and ROS2 to enable an RC car to navigate independently using real-time sensor inputs, based on the F1Tenth competition.","The primary objective of this project is to develop an autonomous 1/10th size model robotic car that synthesizes inputs from a camera, a LIDAR sensor and an IMU sensor to navigate a track. By integrating these sensor inputs and deploying a machine learning model we aim to acheive precise, real-time navigation on a scaled down racecar platform.","The required hardware for this project consists of an embedded computer capable of deploying real time inference models, various sensors for learning the training environment, a motor speed controller and some electronic components. For our computing device, we decided on the Nvidia Jetson Orin Nano for it's CUDA capability and its small form factor. To integrate the sensors we chose to use an Intel Realsense D435i Depth Camera, a Hokuyo UST-10LX LIDAR scanner, and the built in IMU from the VESC MKVI motor speed controller.","To develop our software for operating the car, we utilized the manual driving ROS2 workspace from the official F1Tenth github to provide drivers for some low level communication for the joystick, motor speed controller and lidar. From here we developed several nodes using python for implementing our autonomous mode inlcuding a camera interface based on OpenCV-python, a data collection node to write training data to a .csv file and an autonomous node to predict steering and throttle commands for the car using the deployed machine learning model.","To deploy our machine learning model, we used pytorch for the comfortable user experience, readability and prior experience using the library. The data collection process in the training mode of the ROS2 workspace writes sensor data to a csv file. The model was trained using a Jupyter Notebook due to its ability to run individual code snippets and markdown for readability. The csv file is read into the jupyter notebook runtime as a pandas dataframe and a pytorch dataset, which is used to train our neural networks. Separate models are trained for different data types, such as camera for track navigation and LIDAR for object avoidance.","Because the training inputs are labeled by steering and throttle values automatically through the data collection, there is no discriminator in the dataset during training. This however means that the car will learn to drive as best as the drivers driving the car in the manual driving mode while using a controller. While this speeds up the process of manual labeling in the dataset, it also opens up the training set to be more vulnerable to learn to recreate user errors. For a model with end to end classification, from sensor input to steering and throttle generation, a large dataset is required, in the order of 10s of thousands at least, which would be impractical to manually label in the time frame of this project.","In terms of the future of this project, at the end of the spring term, it will be passed onto next year's project group. There were many considerations outweighed in interest of not exceeding the capability of the hardware, including implementing a time series machine learning model. This consideration would implement something like an LSTM or RNN model to better learn specific movements on the track. Currently the car produces steering and throttle frame by frame of the dataset, whereas implementing a model like this would allow the car to learn predictions based over multiple frames at once, able to characterize entire turns. However this significantly increases the input size to the model as well as the model size, theoretically causing a great increase in inference time.","This project represents a cutting-edge fusion of robotics, machine learning, and embedded systems, demonstrating the potential of AI-driven autonomous navigation. As the Software Lead, I am excited to continue refining the system, exploring advanced algorithms, and pushing the boundaries of what’s possible in small-scale autonomous racing."],
+    dates: ["August 2024","May 2025"],
+    image_path: "autonomous-car.jpg",
+    date: ["2024-08-01","2025-05-01"]
+  },
+  {
+    id: 5,
+    created_at: "2025-08-27 21:31:34.970109+00",
+    title: "Digital Forensics Sensor Fingerprinting",
+    short_blurb: "MATLAB script that identifies camera sensors using Photo-Response Non-Uniformity (PRNU) fingerprints. By preprocessing noise patterns and calculating Peak-to-Correlation Energy (PCE) scores.",
+    link: "https://github.com/c3hodgins/sensorFingerprintingDigitalForensics",
+    languages: ["MATLAB"],
+    long_blurb: ["In this project, I explored digital image forensics through the identification of camera sensors using Photo-Response Non-Uniformity (PRNU). PRNU is a unique noise pattern introduced by imperfections in the manufacturing of camera sensors, effectively serving as a fingerprint for each device. The goal of the project was to design a system in MATLAB that could clean, process, and compare sensor fingerprints to determine whether a given image originated from a specific camera.","The first step involved preprocessing the Canon 6D sensor’s PRNU by removing row and column averages that introduced non-unique noise. I then extracted the noise residuals from test images using channel-wise filtering and combined them into a weighted grayscale representation. These residuals were compared to the Canon 6D fingerprint using normalized cross-correlation in the Fourier domain, followed by the calculation of Peak-to-Correlation Energy (PCE) scores. A threshold of PCE ≈ 60 was used to distinguish genuine matches from non-matches.","The results highlighted two images that strongly correlated with the Canon 6D fingerprint, producing PCE values approaching 10³, while most other images scored below the threshold. Mesh plots of the normalized cross-correlation matrices further confirmed the matches, revealing sharp peaks in the correlation surface that identified both the image source and cropping/shift artifacts. This demonstrated not only the ability to link images back to a specific camera but also to detect manipulations in how those images were presented.","Overall, this project applied key concepts from detection theory to a real-world forensic challenge. By implementing preprocessing, filtering, and correlation techniques from the ground up, I gained hands-on experience in designing reliable digital forensics tools for sensor fingerprinting and image source attribution."],
+    dates: ["May 2025"],
+    image_path: "ncc.png",
+    date: ["2025-05-11"]
+  }
+]

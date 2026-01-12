@@ -1,39 +1,37 @@
 import Link from "next/link";
 import styles from "./projects.module.css";
-import { supabase } from "@/utils/supabase";
+import { projectInfo } from "@/public/ProjectsInfo";
 
 export default async function ProjectPage() {
-  const images = supabase.storage.from("images");
-  let { data: projects } = await supabase.from("Projects").select("*").order("id", { ascending: false });
-
   return (
     <div className={styles.projects}>
-      {projects &&
-        projects
-          .sort((a, b) => new Date(b.date) - new Date(a.date))
+      {projectInfo &&
+        projectInfo.reverse()
           .map((project, index) => (
             <div key={index} className={styles.project}>
               <Link
                 className={styles.projectLink}
                 href={`/projects/${project.id}`}
               >
-                <h1 key={index}>{project.title}</h1>
-              </Link>
+                <h1 className = {styles.projectTitle} key={index}>{project.title}</h1>
+              </Link>              
+              <br />
+              <div className = {styles.projectBody}>
               {project.image_path && (
                 <img
                   className={styles.projectImage}
-                  src={images.getPublicUrl(project.image_path).data.publicUrl}
+                  src={"/"+project.image_path}
                 ></img>
               )}
-              
-              <br />
-              <p>
-                {project.dates.length > 1
-                  ? project.dates[0] + " - " + project.dates[1]
-                  : project.dates[0]}
-              </p>
-              <p style={{ fontSize: "1.5rem" }}>{project.short_blurb}</p>
-              <br />
+              <div className = {styles.textBody}>
+                <p>
+                  {project.dates.length > 1
+                    ? project.dates[0] + " - " + project.dates[1]
+                    : project.dates[0]}
+                </p>
+                <p >{project.short_blurb}</p>
+              </div>
+              </div>
             </div>
           ))}
     </div>

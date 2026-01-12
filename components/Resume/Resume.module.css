@@ -35,6 +35,7 @@
 }
 .resume{
     width:80%;
+    filter:blur(1);
 }
 .resumeContainer{
     display:flex;
@@ -58,7 +59,7 @@
     transform: scale(1.1);
 }
 .resumeLink:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 @media (max-width: 500px){

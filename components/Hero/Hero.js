@@ -20,7 +20,7 @@ export default function Hero({ section }){
               src="IMG_0304.jpeg"
             />
             <div className={styles.heroText}>
-              <h1>Hi!</h1>
+              <h1>Welcome!</h1>
               {text}
             </div>
           </div>

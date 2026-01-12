@@ -27,7 +27,7 @@ export default function Footer() {
         {contactInfo.map((contact, index) => (
             <div className = {styles.contactInfo} key = {index}>
                 {contact.Icon}
-                <a className='hover:text-blue-500' href = {contact.Link}>{contact.Text}</a>
+                <a className={styles.contactLink} href = {contact.Link}>{contact.Text}</a>
             </div>  
         ))}
         <p>New York, NY</p>
