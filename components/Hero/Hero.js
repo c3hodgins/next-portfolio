@@ -17,7 +17,7 @@ export default function Hero({ section }){
           <div className={styles.heroWrapper}>
             <img
               className={styles.heroImg}
-              src="IMG_0304.jpeg"
+              src="image.png"
             />
             <div className={styles.heroText}>
               <h1>Welcome!</h1>

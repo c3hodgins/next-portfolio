@@ -1,7 +1,6 @@
 export const projectInfo = [
   {
     id: 1,
-    created_at: "2025-03-20 20:46:26.366032+00",
     title: "Pololu Zumo 32U4 IR Controlled Tank Robot",
     short_blurb: "Developed an autonomous tank robot capable of navigating obstacle courses using over 10 sensors and outputs. Implemented PWM, bit manipulation, and signal processing to achieve 100% collision avoidance across multiple trials.",
     link: null,
@@ -13,7 +12,6 @@ export const projectInfo = [
   },
   {
     id: 2,
-    created_at: "2025-03-20 16:30:51.524452+00",
     title: "FPGA Metal Detector Embedded System",
     short_blurb: "Programmed a battery powered FPGA system with a softcore processor to detect magnetic field strength using a coil and a 7-segment display",
     link: null,
@@ -25,7 +23,6 @@ export const projectInfo = [
   },
   {
     id: 3,
-    created_at: "2025-03-20 16:31:51.366784+00",
     title: "Next.js Portfolio Website",
     short_blurb: "The website you're on right now! Designed to introduce myself and show off some recent projects. Created with Next.js & deployed on Vercel",
     link: "https://github.com/c3hodgins/next-portfolio",
@@ -37,7 +34,6 @@ export const projectInfo = [
   },
   {
     id: 4,
-    created_at: "2025-03-20 16:27:58.455909+00",
     title: "F1Tenth Autonomous RC Car - Lockheed Martin",
     short_blurb: "Trained and tested an open-source competition autonomous racecar with a  ROS2 workspace using computer vision, lidar point clouds and custom machine pytorch models.",
     link: "https://github.com/Binghamton-University-Roboracer",
@@ -49,7 +45,6 @@ export const projectInfo = [
   },
   {
     id: 5,
-    created_at: "2025-08-27 21:31:34.970109+00",
     title: "Digital Forensics Sensor Fingerprinting",
     short_blurb: "MATLAB script that identifies camera sensors using Photo-Response Non-Uniformity (PRNU) fingerprints. By preprocessing noise patterns and calculating Peak-to-Correlation Energy (PCE) scores.",
     link: "https://github.com/c3hodgins/sensorFingerprintingDigitalForensics",
@@ -58,5 +53,5 @@ export const projectInfo = [
     dates: ["May 2025"],
     image_path: "ncc.png",
     date: ["2025-05-11"]
-  }
+  },
 ]

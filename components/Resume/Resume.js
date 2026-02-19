@@ -63,6 +63,12 @@ export default function Resume() {
 
 const experienceInfo = [
   {
+    Role: "Graduate Researcher",
+    Team: "Binghamton University Digital Data Embedding Lab",
+    Blurb:
+      "Conduct research on Explainable AI methods to interpret deep learning models used to detect hidden information in digital images (steganalysis)",
+  },
+  {
     Role: "Graduate Machine Learning Teaching Assistant",
     Team: "Binghamton University Computer Science Department",
     Blurb:
@@ -72,7 +78,7 @@ const experienceInfo = [
     Role: "Firmware Engineer",
     Team: "Binghamton University Rover Team",
     Blurb:
-      "Interface with sensors and components to write firmware for various subsystems on competition rover",
+      "Write firmware to interface with sensors and components for various subsystems on competition rover",
   },
   {
     Role: "Undergraduate Course Assistant",
