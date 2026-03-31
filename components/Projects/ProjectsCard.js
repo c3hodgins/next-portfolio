@@ -2,7 +2,7 @@ import Link from "next/link";
 import { projectInfo } from "@/public/ProjectsInfo";
 
 export default async function ProjectTab() {
-  const displayedProjects = [...projectInfo].reverse().slice(0, -2);
+  const displayedProjects = [...projectInfo].reverse().slice(0, 3);
 
   return (
     <div className="max-w-6xl mx-auto p-4">
