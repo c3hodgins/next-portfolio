@@ -26,7 +26,7 @@ export const projectInfo = [
     title: "Next.js Portfolio Website",
     short_blurb: "The website you're on right now! Designed to introduce myself and show off some recent projects. Created with Next.js & deployed on Vercel",
     link: "https://github.com/c3hodgins/next-portfolio",
-    languages: ["JavaScript","PostgreSQL"],
+    languages: ["JavaScript"],
     long_blurb: ["I built my personal website as a platform to showcase my projects, technical skills, and interests in software development and machine learning. The site is deployed on Vercel and developed using Next.js, allowing for a smooth, interactive experience. It serves as both a portfolio and a space for experimentation, where I integrate new technologies and features as I refine my web development skills.","Beyond just showcasing my work, my website acts as a testing ground for learning new frameworks and tools. I’ve structured it in a way that makes future expansion easy, whether that’s implementing a blog, adding interactive project demos"],
     dates: ["Feb 2025","Current"],
     image_path: "next-react.png",
