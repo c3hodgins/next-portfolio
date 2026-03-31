@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -12,7 +13,7 @@ export default function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight">
-            Hi, I'm <span className="text-blue-500">Charles.</span>
+            Hi, I&apos;m <span className="text-blue-500">Charles.</span>
           </h1>
 
           <p className="text-xl text-slate-400 leading-relaxed">
@@ -28,9 +29,9 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 pt-4">
-            <a href="/projects" className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/10">
+            <Link href="/projects" className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/10">
               View Projects
-            </a>
+            </Link>
             <a href="mailto:c3hodgins@gmail.com" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl border border-slate-700 transition-all">
               Contact Me
             </a>
