@@ -66,19 +66,19 @@ const experienceInfo = [
     Role: "Graduate Researcher",
     Team: "Binghamton University Digital Data Embedding Lab",
     Blurb:
-      "Conduct research on Explainable AI methods to interpret deep learning models used to detect hidden information in digital images (steganalysis)",
+      "Conducted research on Explainable AI methods to interpret how deep learning models detect hidden information in digital images (steganalysis)",
   },
   {
     Role: "Graduate Machine Learning Teaching Assistant",
     Team: "Binghamton University Computer Science Department",
     Blurb:
-      "Give lectures on machine learning, provide feedback and hold office hours for graduate level data science students",
+      "Gave lectures on machine learning, provide feedback and hold office hours for graduate level data science students",
   },
   {
     Role: "Firmware Engineer",
     Team: "Binghamton University Rover Team",
     Blurb:
-      "Write firmware to interface with sensors and components for various subsystems on competition rover",
+      "Wrote firmware to interface with sensors and components for various subsystems on competition rover",
   },
   {
     Role: "Undergraduate Course Assistant",
@@ -98,6 +98,6 @@ const educationInfo = [
     Degree: "Masters of Science in Electrical and Computer Engineering",
     Focus: "Digital Signal Processing",
     University: "Binghamton University, State University of New York",
-    Grad: "Expected May 2026",
+    Grad: "May 2026",
   },
 ];

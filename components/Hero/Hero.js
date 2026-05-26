@@ -9,7 +9,7 @@ export default function Hero() {
         {/* Left Column: Text & Branding */}
         <div className="space-y-6">
           <div className="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-bold tracking-wide uppercase">
-            Available for Fall 2026 Roles
+            Available for Summer 2026 Roles
           </div>
           
           <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight">
@@ -17,8 +17,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl text-slate-400 leading-relaxed">
-            An aspiring <span className="text-white font-semibold">Software Engineer</span> studying Computer Engineering at 
-            <span className="text-green-400 font-semibold"> Binghamton University</span>.
+            An aspiring <span className="text-white font-semibold">Software Engineer</span> located in  
+            <span className="text-green-400 font-semibold"> New York, NY</span>.
           </p>
 
           <p className="text-slate-500 leading-relaxed">
